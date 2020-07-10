@@ -181,6 +181,8 @@ section img:hover{
 	position: relative;
 } 
 #movie_img{
+	width:29%;
+	height:auto;
 	float:left;	
 	padding:5px;
 	margin:10px;
