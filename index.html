@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FilmyCanvas</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src = "https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="canvas">
+    
+    <div  id="wrapper">
+      <div class="nav-bar">
+        <div class="nav-logo">
+          <a href="filmycanvas.html"><h1 id="my_logo">FilmyCanvas</h1></a>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <a href="filmycanvas.html"><li>Demo1</li></a>
+            <a href="filmycanvas.html"><li>Demo2</li></a>
+            <a href="filmycanvas.html"><li>Demo3</li></a>
+          </ul>
+        </div>
+      </div>
+      <div class="title_room">
+        <h1>Hello <span>Movie Lovers.</span> Let's hope your <span> Moviehunt</span> ends here... </h1>
+        <h2>Search for a <span>Movie</span>!!!!</h2>
+      </div>
+      <div id="search_panel">       
+        <div class="search-box">
+          <input class="search-txt" id="movieName" type="text" name="" placeholder="Search Movie">
+          <a class="search-btn" id="search" onclick="return apiCall()" href="#"> 
+          <i class="fas fa-search"></i> 
+          </a>
+        </div>
+      </div>
+      <h2 id="errormsg"></h2>
+      <div id="resultDiv"></div>
+      <div id="myfooter">
+        Copyright: FilmyCanvas @2020
+      </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</div>
+</body>
+</html> 
