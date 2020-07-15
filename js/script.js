@@ -16,18 +16,25 @@ function apiCall() {
 	var movie = document.getElementById("movieName").value;
 	var result = "";
 	var title = "";
+	var myerror;
 
 	/*user input is added to the API url and the response is saved to a constant 'mydata'*/
     fetch("https://www.omdbapi.com/?s=" + movie + "&apikey=39201518")
     .then((response)=>response.json())
     .then((mydata) => {
       	const movies = mydata.Search;
-      	console.log(mydata);
-        searchMovie(movies);
-        movieName.value = ''; }	)
+	      	myerror= mydata.Response;
+	      	if(myerror == "False"){
+	      		resultDiv.innerHTML = '';
+	      		document.getElementById("errormsg").innerHTML = "No Results Found. Try Again.";
+	      	}else{
+        		searchMovie(movies);
+        		movieName.value = '';}
+       })
 
 }
 function searchMovie(movies) {
+	errormsg.innerHTML="";
 	resultDiv.innerHTML = '';
 	const movieBlock = createResultDiv(movies);
 	resultDiv.appendChild(movieBlock);
